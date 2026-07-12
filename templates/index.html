@@ -10,15 +10,24 @@
    <div class = "container">
     <h1>📧 Spam Message Classifier</h1>
     <p>Enter an SMS or email message below.</p>
-    <textarea id="message" placeholder="Enter your message here">
+    <textarea id="message" placeholder="Type or paste your message here...">
 
     </textarea>
-    <button id="predict-btn">predict</button>
-    <div id="result"></div>
+    <div class="buttons">
+        <button id="predict-btn">predict</button>
+        <button id="clear-btn">clear</button>
+    </div>
+    <div id="result" class="result-box">
+        Your prediction results will appear Here.
+    </div>
+    <footer>
+         Powered by FastAPI • Scikit-learn
+    </footer>
+
 
    </div>
 
 
-    <script src="/static/script.js"></script>
+    <script src="/static/scripts.js"></script>
 </body>
 </html>

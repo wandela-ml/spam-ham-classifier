@@ -1,5 +1,6 @@
 console.log("Javascript loaded successfully!");
 
+const clearButton = document.getElementById("clear-btn");
 const button = document.getElementById("predict-btn");
 
 button.addEventListener("click", async () => {
@@ -41,3 +42,8 @@ button.addEventListener("click", async () => {
     textarea.select();
 
 });
+// Clear Button Event Listener
+    clearButton.addEventListener('click', () => {
+        message.value = "";
+        result.innerHTML = "Your prediction results will appear Here.";
+    });
