@@ -1,6 +1,4 @@
 //DOM elements
-console.log("NEW SCRIPT LOADED");
-alert("This is the scripts.js file I'm editing.");
 
 const messageInput = document.getElementById("message");
 const predictButton = document.getElementById("predict-btn");
