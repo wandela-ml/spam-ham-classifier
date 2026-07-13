@@ -1,18 +1,27 @@
 import re
-import string
-
+import nltk
 
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
-import nltk
+# Download NLTK resources only if they are missing
+try:
+    stopwords.words("english")
+except LookupError:
+    nltk.download("stopwords")
 
-nltk.download("stopwords")
-nltk.download("wordnet")
-nltk.download("omw-1.4")
+try:
+    nltk.data.find("corpora/wordnet")
+except LookupError:
+    nltk.download("wordnet")
+
+try:
+    nltk.data.find("corpora/omw-1.4")
+except LookupError:
+    nltk.download("omw-1.4")
 
 # initialize our objects
-stop_words = set(stopwords.words('english'))
+stop_words = set(stopwords.words("english"))
 lemmatizer = WordNetLemmatizer()
 
 # first create a function that accepts one text at a time
